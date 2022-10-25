@@ -1,0 +1,13 @@
+[Unit]
+Description=Badegva
+After=syslog.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/badegva
+ExecStart=sudo /usr/bin/java -jar -Dserver.port=80 app-1.0.0-SNAPSHOT.jar
+Restart=on-failure
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

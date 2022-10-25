@@ -1,0 +1,51 @@
+div.LOGO {
+    margin-top: 14px;
+}
+
+#site-url span {
+    color: #8999A6;
+    font-weight: lighter;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+div.BANNER1 {
+    margin-top: 22px;
+    margin-left: 157px;
+}
+
+div.ABOUT {
+    color: #8999A6;
+    font-family: Times New Roman, Arial, Verdana;
+    font-size: 14pt;
+}
+
+div.MAIN {
+    color: #8999A6;
+    font-family: Times New Roman, Arial, Verdana;
+    font-size: 14pt;
+}
+
+div.MAIN_RANDOM {
+    color: #8999A6;
+    font-family: Times New Roman, Arial, Verdana;
+    font-size: 14pt;
+}
+
+div.RULES {
+    color: #B0BBC4;
+    font-family: Times New Roman, Arial, Verdana;
+    font-size: 10pt;
+}
+
+div.BANNER2 {
+    margin-top: 25px;
+}
+
+div.COPYRIGHT {
+    margin-bottom: 10px;
+    color: #B0BBC4;
+}
+
+.row-fluid {
+    margin-bottom: 30px;
+}

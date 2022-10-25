@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function add(element) {
+                document.getElementById('act').value = 1;
+                setFormValuesAndSubmit(element);
+            }
+
+            function remove(element) {
+                document.getElementById('act').value = 0;
+                setFormValuesAndSubmit(element);
+            }
+
+            function setFormValuesAndSubmit(element) {
+                document.getElementById('href').value=element.parentElement.parentElement.getElementsByClassName('href')[0].value;
+                document.getElementById('ru').value=element.parentElement.parentElement.getElementsByClassName('ru')[0].checked;
+                document.getElementById('partner').value=element.parentElement.parentElement.getElementsByClassName('partner')[0].checked;
+                document.forms['href_act'].submit();
+            }
+        </script>
+    </head>
+    <body>
+        <span th:text="'On moderate: ' + ${moderateCount}"/>
+        <span th:text="'Approved: ' + ${approvedCount}"/>
+        <span th:text="'Approved ru: ' + ${approvedRuCount}"/>
+        <span th:text="'Partner hrefs: ' + ${partnerCount}"/>
+        <table>
+            <tr th:each="href: ${hrefs}">
+                <td>
+                    <a th:href="${href.ref}" target="_blank" th:text="${href.ref}"></a>
+                    <input type="hidden" th:value="${href.id}" class="href"/>
+                </td>
+                <td>
+                    <label for="ru">ru</label>
+                    <input type="checkbox" class="ru">
+                </td>
+                <td>
+                    <label for="partner"> ------------- partner</label>
+                    <input type="checkbox" class="partner">
+                </td>
+                <td>
+                    <input type="button" onclick="javascript:add(this)" value="approve">
+                </td>
+                <td>
+                    <input type="button" onclick="javascript:remove(this)" value="delete">
+                </td>
+            </tr>
+        </table>
+        <form action="/act" method="post" name="href_act">
+            <input type="hidden" id="href" name="href"/>
+            <input type="hidden" id="ru" name="ru"/>
+            <input type="hidden" id="partner" name="partner">
+            <input type="hidden" id="act" name="act"/>
+        </form>
+    </body>
+</html>

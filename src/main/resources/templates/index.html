@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+           ym(57185611, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/57185611" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+        <title>Случайный сайт | Бесконечное развлечение</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <script type="text/javascript">
+            var clicksCount = 1;
+            function switchOnlyRuParam(element) {
+                var link = document.getElementById('link').href;
+                if (element.checked) {
+                    document.getElementById('link').setAttribute('href', link + '&ru=1')
+                } else {
+                    document.getElementById('link').setAttribute('href', link.replace('&ru=1', ''))
+                }
+            }
+        </script>
+
+    </head>
+    <body style="background-color:#FFFFFF; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;">
+        <div class="container-fluid" style="padding-left:45px;">
+            <div class="row-fluid">
+                <div class="span4 LOGO">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h1 id="site-url" style="margin-bottom: 10px;">
+                                        <span style="font-size:45;">anydayanysite</span>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <h4 id="site-url">
+                                        <span style="font-size:25;">бесконечное развлечение</span>
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="span8 BANNER1" align="right">
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span3 ABOUT">
+              <span style="line-height:1.25">
+                Нажмите на <font color="#00AE36">большую зеленую кнопку</font> и откроется окно со случайно выбранным сайтом. Нажмите еще раз - откроется другой сайт. И так до бесконечности. Если вы хотите увидеть случайный сайт рунета, отметьте опцию "Показывать только сайты рунета". Добавляйте интересные вам ссылки и делитесь ими с другими людьми
+              </span>
+                    <br>
+                    <div class="BANNER2">
+                    </div>
+                </div>
+                <div class="span6 MAIN" align="center">
+                    <script>
+                        window.onload = function() {document.getElementById('flag').checked=false;}
+                    </script>
+                    <form action="add" method="post">
+                        Ваша ссылка:
+                        <input type="text" name="ref" size="30" maxlength="500" placeholder="http://" style="height:28px;">
+                        <input type="submit" value="Добавить">
+                        <div th:if="${added}"><span style="font-size: 12px">ссылка успешно добавлена. спасибо!</span></div>
+                    </form>
+                    <br>
+<!--                        <input id="flag" type="checkbox" onclick="switchOnlyRuParam(this)" style="visibility: hidden"> Показывать только сайты рунета-->
+                        <input id="flag" type="checkbox" onclick="switchOnlyRuParam(this)" style="visibility: hidden">
+                    <br>
+                    <br>
+                    <a id="link" href="/random?q=1" target="_blank" onclick="window.open(this.href, '_blank'); this.setAttribute('href', '/random?q=' + ++clicksCount); switchOnlyRuParam(document.getElementById('flag')); return false;">
+                        <img style="margin-top:5px;" src="images/button.jpg" width="412" height="461" title="Нажмите и откроется интересный случайный сайт" alt="Нажмите и откроется интересный случайный сайт">
+                    </a>
+                    <br>
+                    <br>
+                    <div style="font-size:12px;" align="left">
+                        <br>
+                        <br>
+                        Когда в интернете скучно, когда вы не знаете, какой бы еще интересный сайт найти - зайдите на сайт anydayanysite.ru. Он подберет для вас случайный интересный сайт. Случайные ссылки подбираются из собственной базы данных. В базу попадают только сайты, проверенные модератором. Таким образом мы подберем для вас безопасный сайт наугад и вы можете быть уверены в безопасности этого сайта. Доверьтесь случаю - изучайте закоулки рунета и расширяйте кругозор вместе с anydayanysite!
+                        <br>
+                        Также вы можете добавлять те сайты, которые вам кажутся интересными. Тематика неважна, добавляйте все подряд - научные статьи, бьюти-блоги, смешные картинки, видео - мы будем рады всему.
+                        <br>
+                        А если у вас есть свой сайт и вы хотите поднять трафик и бесплатно увеличить число посетителей - добавляйте все странички вашего сайта. И посетителей будет перекидывать на ваши сайты
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="span3 RULES">
+                    1. Запрещается размещать ссылки на сайты, содержащие порнографический, шокирующий или способствующий разжиганию национальной вражды материал.
+                    <br>
+                    <br>
+                    2. Если вы считаете, что какая-либо ссылка должна быть удалена, напишите сообщение в <a href="http://vk.com/badegva_ru" target="_blank">группе Вконтакте</a> с указанием причины удаления ссылки.
+                    <br>
+                    <br>
+                    3. Перед добавлением все ссылки проверяются модератором.
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12 COPYRIGHT" align="center">
+                    <small>© anydayanysite, 2010-2021, 18+ </small>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
